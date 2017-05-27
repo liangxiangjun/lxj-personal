@@ -1,0 +1,427 @@
+@import url(base.css);
+@import url(animate.css);
+@import "mixin";
+
+@font-face {
+  font-family: Ave;
+  src: url('../font/AvenirLTStd-Heavy.woff');
+}
+@font-face {
+  font-family: Let;
+  src: url('../font/LetterGothicStd.woff');
+}
+//动画
+.fadeUp{
+  animation: fadeInUp .8s ease;
+}
+.zoomIns{
+  animation:zoomIn 1s ease infinite both ;
+}
+
+
+body{
+  background: #F7F2E5;
+}
+//首页
+.homepage{
+  @include wh(100%,90vh);
+  background: url("../img/475624b3663f7a2.jpg") center/cover no-repeat;
+  position: relative;
+
+  z-index: 99999;
+  //.yellow{
+  //  @include wh(16px,27px);
+  //  background: url("../img/shape_yellow.svg") no-repeat;
+  //  position: absolute;
+  //  z-index: 2222;
+  //}
+  .resume{
+    @include wh(800px,200px);
+    @include ft(160px, #fdcd06,100px,center);
+    @include pos;
+    font-family: Ave;
+    animation: fadeInUp .6s ease;
+  }
+  h7{
+    @include wh(400px,100px);
+    @include ft(32px,#fdcd06,220px,center);
+    @include pos;
+    font-family: Let;
+    animation: fadeInUp .6s ease .4s both;
+  }
+  .scroll{
+    display: block;
+    @include whb(100px,100px,#fbd965);
+    border-radius: 100px;
+    @include cent;
+    bottom: -50px;
+    @include ft(16px,#fff,100px,center);
+    font-family: Let;
+    animation: fadeInUp .6s ease .8s both;
+  }
+}
+.homepages{
+  @include wh(100%,100vh);
+  position: absolute;
+  top:100vh;
+  z-index: 0;
+}
+
+
+//尾页
+.endpage{
+  @include wh(100%,15px);
+  position: fixed;
+  bottom: 0;
+  padding:0 3% 7vh 3%;
+  z-index: 99998;
+  //.inner{
+  //  @include wh(90%,100%);
+  //  background: blue;
+  //}
+  .end1,.end2,.end3{
+    display: inline-block;
+    position: absolute;
+    @include wh(15px,15px);
+    top: 20%;
+  }
+  .end1{
+    background: url("../img/instagram.svg") no-repeat center/contain;
+    margin: auto;
+  }
+  .end2{
+    background: url("../img/shape.svg") no-repeat center/cover;
+    margin: auto;
+    left: 47%;
+  }
+  .end3{
+    background: url("../img/facebook.svg") no-repeat center/contain;
+    margin: auto;
+    left: 90%;
+  }
+}
+
+
+//fixTop
+.fixTop{
+  @include wh(100%,100px);
+  position: fixed;
+  top: 8vh;
+  z-index: 223;
+  .fixTop_left{
+    display: inline-block;
+    position: absolute;
+    padding-right: 100px;
+    top: 50%;
+    margin-top: -10px;    //修改
+    left:20%;
+  }
+  .fixTop_left>li{
+    display: inline-block;
+    margin-right:80px;
+    @include wh(64px,auto);
+  }
+  .anifix{
+    display: block;
+    @include wh(100px,20px);
+    background: url("../img/111.png") center/cover no-repeat;
+  }
+  .fixTop_right{
+    display: inline-block;
+    position: absolute;
+    padding-left: 100px;
+    top: 50%;
+    margin-top: -10px;    //修改
+    right:20%;
+  }
+  .fixTop_right>li{
+    display: inline-block;
+    margin-left:80px;
+    @include wh(64px,auto);
+  }
+  li>a{
+    position: absolute;
+    top: 0;
+    display: block;
+    @include wh(auto,100%);
+    @include ft(16px, #C7A398,16px,center);
+    &:hover{
+      color: darken(#C7A398,20%);
+    }
+  }
+  .center{
+    @include wh(100px,100px);
+    @include cent;
+  }
+ .center1{
+    display: block;
+    @include wh(56px,66px);
+    background: url("../img/logo_in.svg") center/contain no-repeat;
+    position: absolute;
+    top: 50%;
+   margin-top: -33px;
+   left: 50%;
+   margin-left: -28px;
+  }
+  .center2{
+    display: block;
+    @include wh(112px,116px);
+    background: url("../img/logo_out.svg") center/contain no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -58px;
+    left: 50%;
+    margin-left: -56px;
+  }
+}
+
+
+//内容centent
+.cent_pos1{
+  position: absolute !important;
+  top:100vh !important;
+}
+.cent_pos2{
+  position: absolute !important;
+  top:300vh !important;
+}
+.cent_pos3{
+  position: absolute !important;
+  top:400vh !important;
+}
+.cent_pos4{
+  position: absolute !important;
+  top:500vh !important;
+}
+
+.centent{
+  z-index: 22;
+
+  .centent1{
+    //background-attachment: fixed;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include wh(90%,200vh);
+    //background: red;
+    .inner1,.inner2,.inner3{
+      margin: 5px;
+      @include cents;
+    }
+    .inner1{
+      @include wh(30%,900px);
+      left: 5%;
+      top: 15%;
+      //background: yellow;
+    }
+    .inner1 a{
+      display: block;
+      @include wh(100%,40%);
+      margin-top: 30px;
+      text-align: center;
+      & h5{
+        @include ft(30px,#C7A398,50px,center);
+      }
+      & span{
+        @include ft(16px,#D2B8BD,30px,center);
+
+      }
+    }
+    .inner2{
+      @include wh(25%,400px);
+      left: 38%;
+      top: -43%;
+      background: url("../img/zipai.jpg") no-repeat center/cover;
+    }
+    .inner3{
+      @include wh(30%,900px);
+      left: 65%;
+      top: 35%;
+      //background: orange;
+    }
+    .inner3 a{
+      display: block;
+      @include wh(100%,40%);
+      margin-top: 30px;
+      & h5{
+        @include ft(30px,#C7A398,50px,center);
+      }
+      & span{
+        @include ft(16px,#D2B8BD,30px,center);
+
+      }
+    }
+    h3{
+      @include wh(80%,200px);
+      @include pos;
+      top: -50%;
+      @include ft(120px,#FBD965,60px,center);
+      font-family: Ave;
+      opacity: 0.7;
+    }
+  }
+  .centent2{
+    position: fixed;
+    top: 100vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include wh(90%,100vh);
+    .circle{
+      @include wh(450px,450px);
+      @include pos;
+    }
+    .cir1{
+      @include wh(400px,400px);
+      @include pos;
+      border-radius: 400px;
+      border: 35px solid #FBD965;
+      opacity: 0.8;
+
+    }
+
+    .cir3{
+      @include wh(260px,260px);
+      @include pos;
+      border-radius: 260px;
+      border: 35px solid #FBD965;
+      opacity: 0.8;
+
+    }
+
+    .cir5{
+      @include wh(120px,120px);
+      @include pos;
+      border-radius: 120px;
+      border: 35px solid #FBD965;
+      opacity: 0.8;
+
+    }
+
+    h3{
+      @include wh(330px,200px);
+      @include centers(10%,20%);
+      @include ft(100px,#C7A389,100px,left);
+      font-family: Ave;
+    }
+    .cent{
+      @include wh(400px,400px);
+      @include centers(60%,25%);
+    }
+    .cent1,.cent2,.cent3{
+      @include wh(400px,120px);
+      margin-bottom: 15px;
+      @include ft(16px,#D3BAA7,30px,left);
+      font-family: Let;
+    }
+  }
+  .centent3{
+    position: fixed;
+    top:200vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include wh(90%,100vh);
+
+    h3{
+      @include wh(700px,120px);
+      //@include pos;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 35%;
+      @include ft(120px,#C7A389,100px,left);
+      font-family: Ave;
+    }
+    .items{
+      @include wh(700px,120px);
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 52%;
+      @include ft(22px,#C7A389,30px,center);
+      font-family: Ave;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .circles{
+      @include wh(495px,475px);
+      @include pos;
+      top:30%;
+      & div{
+        @include wh(80px,80px);
+        border-radius: 80px;
+        border: 30px solid #FBD965;
+      }
+    }
+    .cirs1,.cirs2,.cirs3,.cirs4{
+      display: inline-block;
+      margin-right: -20px;
+    }
+    .cirs5,.cirs6,.cirs7{
+      display: inline-block;
+      margin-right: -20px;
+      margin-top: -45px;
+    }
+    .cirs5{
+      margin-left: 60px;
+    }
+    .cirs8,.cirs9{
+      display: inline-block;
+      margin-right: -20px;
+      margin-top: -45px;
+    }
+    .cirs8{
+      margin-left: 120px;
+    }
+    .cirs10{
+      display: inline-block;
+      margin-left: 180px;
+      margin-top: -45px;
+    }
+
+  }
+  .centent4{
+    position: fixed;
+    top: 300vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include wh(90%,100vh);
+    h3{
+      @include wh(500px,120px);
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 30%;
+      @include ft(120px,#C7A389,100px,center);
+      font-family: Ave;
+    }
+    .img{
+      @include whb(450px,500px,red);
+      @include centers(15%,20%);
+      background: url("../img/woshou.jpg") center/cover no-repeat;
+    }
+    .contact{
+      @include wh(500px,300px);
+      @include centers(60%,50%);
+
+      li{
+        @include wh(100%,40px);
+        margin-bottom: 8px;
+        @include ft(20px,#C7A389,40px,left);
+      }
+    }
+
+  }
+
+
+
+}
